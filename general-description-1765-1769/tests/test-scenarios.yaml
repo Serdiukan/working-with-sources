@@ -1,0 +1,213 @@
+# Test scenarios for coders of the General Description, 1765–1769.
+#
+# Each case is a short SYNTHETIC situation in the style of the source (not a quotation
+# from any edition) with the expected coding decision. Use them to check a new coder,
+# human or AI, before real work: give the situation, compare the answer with `expected`.
+# `rules` points to docs/coding-manual.md.
+#
+# These are reasoning checks, not automatic unit tests.
+
+method: general-description-1765-1769
+version: "1.0"
+
+cases:
+  - id: alternative_ages
+    rules: [A9, "manual §4"]
+    situation: "Two readings of the same entry give the worker's age as 13 and as 30. Neither can be preferred on the evidence available."
+    expected:
+      - "age_value is empty; age_value_status = conflicting."
+      - "Both readings are kept in the review log with their locators."
+      - "The ages are not averaged and not turned into an interval 13–30."
+
+  - id: age_in_later_addition
+    rules: [F06, "manual §3.5"]
+    situation: "The original record names a son without an age. A later note in another hand adds «осми лѣтъ»."
+    expected:
+      - "The original-layer profile keeps age_value empty with status not_recorded."
+      - "A separate layer of kind uncertain (another hand, no date) gets a sparse profile with age 8."
+      - "No date is invented for the later layer."
+
+  - id: health_after_children
+    rules: [B35]
+    situation: "«…у них дети сынъ Иванъ 5 дочь Марія 3, здоровы»"
+    expected:
+      - "Both children get health_code = explicit_healthy."
+      - "The father and mother get health status scope_uncertain, not healthy."
+
+  - id: named_condition_overrides
+    rules: [F12, "manual §11.3"]
+    situation: "«…здоровъ, на правую ногу хромаетъ»"
+    expected:
+      - "The profile records the condition category, not plain healthy."
+      - "A separate HEALTH_OBS row: manifestation limping, body part leg, side right."
+      - "No modern diagnosis and no inferred inability to work."
+
+  - id: singular_vs_plural_children
+    rules: [B47]
+    situation: "Entry A: «…у него сынъ Петръ 12». Entry B: «…у них сынъ Петръ 12». In both, the head (40) has a wife (35)."
+    expected:
+      - "Entry A: only father_of from the head to Petro. The wife's motherhood is not assumed."
+      - "Entry B: father_of and mother_of from both spouses."
+
+  - id: implausible_age_gap
+    rules: [B47]
+    situation: "«…у них дочь 30». The head is 60 and his wife 38."
+    expected:
+      - "The father link is accepted."
+      - "The mother link (gap 8 years) is a candidate only, with a note."
+
+  - id: wife_and_children
+    rules: [A6]
+    situation: "«Пожилецъ Иванъ Коваль 40 лѣтъ съ женою и дѣтми»"
+    expected:
+      - "Ivan Koval is a person; the wife is created as a specific unnamed person with a spouse link."
+      - "The children are an unnamed collective of unknown size: no individuals, no invented number."
+      - "The entry is flagged as having an unnamed aggregate."
+
+  - id: same_name_same_age
+    rules: [A5, B4]
+    situation: "Two sons, «Иванъ десяти» and «Иванъ же десяти», in one entry."
+    expected:
+      - "Two persons, each with age 10, flagged as same name and age."
+
+  - id: two_for_two_rubles
+    rules: [A7]
+    situation: "«работники Семенъ и Яковъ, наняты за два рубли погодно»"
+    expected:
+      - "Each worker gets a cash wage of 2 rubles per year (amount_scope per_each_named, period year)."
+
+  - id: joint_sum
+    rules: [F11]
+    situation: "«работникъ Данило съ женою наняты за три рубли погодно»"
+    expected:
+      - "One wage statement of 3 rubles per year with amount_scope shared_group."
+      - "The sum is not divided between husband and wife."
+
+  - id: own_clothes
+    rules: [B40]
+    situation: "«…на пищѣ хозяйской, на своемъ платьѣ, за рубль»"
+    expected:
+      - "Food support recorded_positive; clothing support explicit_absence; cash wage 1 ruble."
+      - "Nothing is said about whether the worker owns clothes."
+
+  - id: maintenance_no_wage
+    rules: [A8]
+    situation: "«…сирота взята на пропитаніе»"
+    expected:
+      - "A maintenance statement with the girl as beneficiary and no numeric value."
+      - "No cash wage of 0 is created."
+
+  - id: deferral
+    rules: ["manual §2.7", "manual §4"]
+    situation: "The entry lists the people and ends «а о протчемъ покажетъ комиссіи»."
+    expected:
+      - "documentation_mode = general_deferral."
+      - "Unlisted property is deferred, not zero and not explicit absence; the informant is not 'unknown'."
+
+  - id: pogodno_and_neighbouring_unit
+    rules: [B36]
+    situation: "In a list of three wages, the first has «по два рубли погодно», the second «по полтора погодно» with no unit."
+    expected:
+      - "Both are per year. The second takes the unit ruble from the same list, with a note."
+
+  - id: hiring_without_worker
+    rules: [B24]
+    situation: "«…наняты за три рубли на хозяйской пищѣ» with no worker named before or after."
+    expected:
+      - "No person is created."
+      - "Economic statements are created with the employer as the only party."
+      - "The review log records the gap as irreducible on the available evidence."
+
+  - id: employer_default
+    rules: [A16, A16a]
+    situation: "Entry A: the owner lives in the yard with his family; a worker with a wage follows, no other employer is named. Entry B: the same, but the text says «наняли пожилецъ Иванъ» for the worker."
+    expected:
+      - "Entry A: the employer is the head of the yard, the resident owner."
+      - "Entry B: the text names another employer, so the lodger Ivan is the employer."
+      - "For hiring, this rule takes precedence over the pronoun rule; unclear cases go to the review log."
+
+  - id: signing_for_illiterate
+    rules: [A4, B7]
+    situation: "«Вмѣсто хозяина Петра Сухого неграмотного по его прошенію Иванъ Бондаренко руку приложилъ»"
+    expected:
+      - "A signs_for link from Ivan Bondarenko to Petro Sukhyi."
+      - "Petro Sukhyi: literacy explicit_illiterate."
+      - "Ivan Bondarenko is mentioned only; no literacy code beyond the signing link; not a resident."
+
+  - id: signing_without_illiterate
+    rules: [B40]
+    situation: "«Вмѣсто Петра Сухого по его прошенію Иванъ Бондаренко подписался»"
+    expected:
+      - "signs_for link as above."
+      - "Petro Sukhyi's literacy is not established (ambiguous / not recorded)."
+
+  - id: signer_in_two_entries
+    rules: [A10, A12]
+    situation: "Ivan Bondarenko signs for illiterate owners in two entries; in a third entry a resident Ivan Bondarenko, 30, no rank, did not sign."
+    expected:
+      - "The two signers are merged into one participant."
+      - "The resident in the third entry is not merged by the signer rule; at most a candidate same_entity link."
+
+  - id: heading_owner
+    rules: [A14]
+    situation: "«Дворъ козака Ивана Сухого», but the text lists only workers and says the owner lives elsewhere."
+    expected:
+      - "An ownership statement with Ivan Sukhyi as owner (recorded_positive)."
+      - "Ivan Sukhyi is mentioned only, residence explicit_nonresident; he is not counted as a resident."
+
+  - id: son_in_law_heading
+    rules: [A15]
+    situation: "«Дворъ Михайла Гончарова зятя»"
+    expected:
+      - "The householder is Mykhailo; he is Honchar's son-in-law; his own surname is not established."
+      - "Honchar is not created as a person."
+
+  - id: darker_ink
+    rules: [B15]
+    situation: "The edition notes that a wife and a worker were added in darker ink after the listing of the yard."
+    expected:
+      - "A separate layer of kind uncertain, without a date."
+      - "The wife and the worker are not in the original layer and not in the residents table."
+
+  - id: edition_footnote_name
+    rules: [B13, B32]
+    situation: "An editor's footnote reads «очевидно, описка: має бути Петро» next to the name Павелъ."
+    expected:
+      - "The person is coded as Pavlo, by the text."
+      - "The conjecture Petro is a candidate identification in a note and in the review log."
+      - "The footnote creates no person."
+
+  - id: later_birth_note
+    rules: [B25, B30]
+    situation: "A later note dated 3 March 1767 says a daughter Paraskeviia was born to the head."
+    expected:
+      - "Paraskeviia is a person in a later layer with a family membership in that layer."
+      - "A birth event dated as an interval from the date of the entry to 1767-03-03; no day invented."
+
+  - id: complex_and_component
+    rules: [F10]
+    situation: "«…двѣ хаты, въ одной живетъ хозяинъ, въ другой пожилецъ»"
+    expected:
+      - "One asset of two huts (aggregate) and, where needed, components linked by parent_asset_id."
+      - "Totals never add the components to the complex: there are two huts, not four."
+
+  - id: subject_not_serf
+    rules: [F13]
+    situation: "«…подданый пана сотника Ивана Сухого»"
+    expected:
+      - "dependency = subject; social estate not stated unless the text says it."
+      - "Not coded as serf."
+
+  - id: cossack_son_and_widow
+    rules: [F13, "manual §11.11"]
+    situation: "«козачій сынъ Семенъ» and «вдова пушкарка Марія»"
+    expected:
+      - "Semen: social_status = cossack_son, not cossack."
+      - "Maria: widowed; she is not a gunner; the rank belongs to her late husband."
+
+  - id: crossed_out_entry
+    rules: ["manual §2.6"]
+    situation: "A whole entry is struck through in the source."
+    expected:
+      - "The entry is coded in full and marked crossed out."
+      - "It is excluded from demographic counts but kept for registration and property studies."
