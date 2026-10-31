@@ -8,7 +8,7 @@ This repository publishes **methodology only**. It contains no transcriptions of
 
 | Project | Source | Status |
 |---|---|---|
-| [General Description of Little Russia, 1765–1769](general-description-1765-1769/) | The General (Rumiantsev) Description: household-level inventory of the Hetmanate. First settlement: Poltava, town and suburb | Method v1.0. Poltava fully coded. Dataset release in preparation |
+| [General Description of the Hetmanate, 1765–1769](general-description-1765-1769/) | The General (Rumiantsev) Description: a household-level inventory of the Hetmanate. First settlement: Poltava, town and suburb | Method v1.0. Poltava fully coded. Dataset release in preparation |
 
 Each project lives in its own folder with its own README, documentation, schema and tests. More source projects will be added in the same way.
 
@@ -21,7 +21,7 @@ Each project lives in its own folder with its own README, documentation, schema 
 
 ## Author
 
-Igor Serdiuk ([@Serdiukan](https://github.com/Serdiukan)).
+Igor Serdiuk · ORCID [0000-0002-8930-1410](https://orcid.org/0000-0002-8930-1410) · GitHub [@Serdiukan](https://github.com/Serdiukan)
 
 ## How to cite
 
