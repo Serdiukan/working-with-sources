@@ -1,0 +1,14 @@
+# This repository holds methodology only.
+# Never commit sources, editions, transcriptions or coded data.
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.xlsm
+*.numbers
+*.zip
+*.json
+data/
+private/
+.DS_Store
