@@ -1,0 +1,381 @@
+code_list,code,label_uk,label_en,definition_en
+coverage_domain,people,Люди,People,People
+coverage_domain,kinship,Споріднення,Kinship,Kinship
+coverage_domain,residence,Проживання,Residence,Residence
+coverage_domain,health,Здоров’я,Health,Health
+coverage_domain,status,Соціальні характеристики,Social characteristics,Social characteristics
+coverage_domain,buildings,Будівлі,Buildings,Buildings
+coverage_domain,land,Земля,Land,Land
+coverage_domain,remote_property,Віддалене майно,Remote property,Remote property
+coverage_domain,rights,Права і документи,Rights and documents,Rights and documents
+coverage_domain,labor,Праця та платня,Labour and wages,Labour and wages
+coverage_domain,trade,Торгівля,Trade,Trade
+coverage_domain,production,Виробництво,Production,Production
+coverage_domain,capital,Капітал,Capital,Capital
+coverage_domain,debt,Борги,Debts,Debts
+coverage_domain,dues,Податки та повинності,Taxes and dues,Taxes and dues
+coverage_domain,livestock,Худоба,Livestock,Livestock
+coverage_domain,signatures,Підписи й інформанти,Signatures and informants,Signatures and informants
+section,CITY,Місто / фортеця,Town / fortress,Town / fortress section of the description
+section,FORSTADT,Форштадт,Forshtat,Forshtat: suburb outside the fortified town
+section,UNRESOLVED,Розділ не встановлений,Section not established,Section not established
+source_kind,manuscript,Рукопис,Manuscript,Archival manuscript
+source_kind,edition_pdf,Наданий PDF тексту видання,Supplied PDF of the edition text,Supplied PDF; its version stage and correspondence to the final print are to be established separately.
+source_kind,transcription_word,Транскрипція Word,Word transcription,Editor's Word transcription
+source_kind,legacy_database,Попередня база,Earlier database,Earlier database (candidate values only)
+source_kind,method_reference,Методичний довідник,Methodological reference,Methodological reference
+source_kind,map,Карта,Map,Map
+source_role,primary_witness,Версія історичного джерела,Witness of the historical source,Witness of the historical source
+source_role,import_candidate,Джерело кандидатних значень,Source of candidate values,"Source of candidate values, always checked against the witness"
+source_role,method,Методичний зразок,Methodological sample,Methodological sample
+source_role,reference,Довідкове обґрунтування,Reference justification,Reference work used as justification
+entry_type,yard,Двір,Yard,Yard (urban plot with dwellings)
+entry_type,yard_site,Дворове місце,Yard site,Yard site / empty plot
+entry_type,detached_huts,Бездворні хати,Huts without a yard,Huts without a yard
+entry_type,pidvarok,Підварок,Pidvarok,"Pidvarok: subsidiary yard, usually inhabited by subjects or tenants of the owner"
+entry_type,institution,Установа,Institution,"Institution (church, monastery, office)"
+entry_type,production_site,Виробничий об’єкт,Production site,"Production site (forge, brewery, distillery, mill)"
+entry_type,mixed_complex,Змішаний комплекс,Mixed complex,Mixed complex
+entry_type,other,Інше,Other,Other object
+entry_type,unknown,Не встановлено,Not established,Not established
+documentation_mode,no_general_deferral_observed,Загального відкладення не виявлено,No general deferral found,No general deferral formula found
+documentation_mode,general_deferral,Загальне відкладення,General deferral,General deferral ('he will show the rest to the commission')
+documentation_mode,specific_deferral,Відкладення окремої відомості,Deferral of a specific item,Deferral of a specific item of information
+documentation_mode,information_requested,Запит до власника,Request to the owner,Information requested from the owner
+documentation_mode,owner_absent_information_unknown,Відомості невідомі за відсутності власника,Information unknown because the owner is absent,Information unknown because the owner is absent
+documentation_mode,mixed,Кілька способів; сферу пояснено,Several modes; scope explained,Several modes; scope explained in the record
+documentation_mode,unassessed,Ще не перевірено,Not yet assessed,Not yet assessed
+record_status,imported_unverified,"Перенесено, не звірено","Imported, not checked","Imported, not checked"
+record_status,source_checked,Звірено з джерелом,Checked against the source,Checked against the source
+record_status,requires_review,Потребує перевірки,Requires review,Requires review
+record_status,disputed,Суперечливе,Disputed,Disputed
+record_status,excluded,Виключено зі збереженням історії,"Excluded, history kept","Excluded, history kept"
+layer_kind,initial,Первісний запис,Original record,Original record
+layer_kind,supplement,Пізніше доповнення,Later addition,Later addition
+layer_kind,correction,Виправлення,Correction,Correction (the corrected layer is kept)
+layer_kind,crossed_out,Закреслений шар,Crossed-out layer,Crossed-out text
+layer_kind,uncertain,Шар не встановлений,Undetermined layer,Separate layer of undetermined date (other hand or ink)
+date_precision,day,До дня,To the day,Exact to the day
+date_precision,month,До місяця,To the month,Exact to the month
+date_precision,year,До року,To the year,Exact to the year
+date_precision,interval,Інтервал,Interval,Interval between two dates
+date_precision,unknown,Невідомо,Unknown,Unknown
+basis,explicit_individual,Пряме індивідуальне,"Direct, individual",The formula directly concerns this person or object.
+basis,explicit_group,Пряме групове,"Direct, group",The formula directly covers an established group; its membership is listed or justified.
+basis,contextual,Контекстне,Contextual,Inference from context; not a verbatim characteristic.
+basis,inferred_from_name,За ім’ям або граматикою,From name or grammar,"For example, determining sex; the basis must be recorded."
+basis,researcher_rule,За правилом дослідника,By researcher's rule,Versioned rule from RULES; does not replace the as_recorded field.
+basis,calculated,Обчислене,Calculated,Derived from other fields by a known rule.
+basis,editorial,Редакторське,Editorial,Correction or interpretation by the edition's editor; kept separate from the manuscript.
+basis,unknown,Підстава не встановлена,Basis not established,The value cannot be considered verified.
+calendar,julian,Юліанський,Julian,Julian (Old Style)
+calendar,gregorian,Григоріанський,Gregorian,Gregorian
+calendar,unspecified,Не встановлено,Not established,Not established; dates are not converted
+evidence_kind,full_entry,Повний текст опису,Full text of the entry,Full text of the entry
+evidence_kind,passage,Фрагмент,Passage,Passage
+evidence_kind,heading,Заголовок,Heading,Route or day heading
+evidence_kind,marginal_note,Маргіналія,Marginal note,Marginal note of the document
+evidence_kind,crossing_out,Закреслення,Crossing-out,Crossed-out text
+evidence_kind,editorial_note,Редакторська примітка,Editorial note,Editor's note in the edition
+transcription_status,readable,Читається,Readable,Readable
+transcription_status,partly_unclear,Частково непевне,Partly uncertain,Partly uncertain reading
+transcription_status,illegible,Не читається,Illegible,Illegible
+transcription_status,needs_pdf_check,Потребує перевірки за PDF,Needs checking against the PDF,To be checked against the PDF image
+transcription_status,variant_conflict,Конфлікт версій,Conflict of versions,Conflicting readings
+actor_type,person,Людина,Person,Person
+actor_type,institution,Установа,Institution,Institution
+actor_type,named_collective,Названий колектив,Named collective,Named collective
+identification,named,Іменований,Named,Named person
+identification,unnamed_individual,Окрема неіменована людина,Individual unnamed person,A specific person whose name is not given
+identification,uncertain,Ідентифікація непевна,Identification uncertain,Identification uncertain
+sex,M,Чоловіча,Male,Male
+sex,F,Жіноча,Female,Female
+sex,unknown,Невідома,Unknown,Unknown
+age_unit,year,Роки,Years,Years
+age_unit,month,Місяці,Months,Months
+age_unit,week,Тижні,Weeks,Weeks
+age_unit,day,Дні,Days,Days
+qualifier,stated,Число наведене без уточнення точності,Number stated without precision qualifier,Number stated without precision qualifier
+qualifier,exact,Прямо засвідчена точність,Exact (explicitly attested),Exact: precision explicitly attested
+qualifier,approximate,Приблизне,Approximate,Approximate
+qualifier,upper_bound,Верхня межа,Upper bound,Upper bound
+qualifier,lower_bound,Нижня межа,Lower bound,Lower bound
+qualifier,interval,Інтервал,Interval,Interval
+qualifier,unspecified,Не застосовується або не встановлено,Not applicable or not established,Not applicable or not established
+marital,married,Одружений/одружена,Married,Married
+marital,never_married,Не був/була в шлюбі за прийнятим прочитанням,Never married (on the accepted reading),Never married on the accepted reading (e.g. «девка»)
+marital,widowed,Вдівець/вдова,Widowed,Widowed (widower / widow)
+marital,separated,"Роздільне подружнє життя, якщо прямо названо","Separated, if explicitly stated","Separated married life, if explicitly stated"
+marital,not_stated,Прямої вказівки немає,No direct statement,No direct statement
+marital,unclear,Формула неоднозначна,Ambiguous formula,Unclear: ambiguous formula
+health,explicit_healthy,Прямо названо здоровим,Explicitly called healthy,Explicitly called healthy ('здоров')
+health,explicit_condition,"Названа хвороба, вада або симптом","Named illness, defect or symptom","Named illness, defect or symptom"
+health,explicit_frailty,Прямо названа дряхлість,Explicit frailty,Explicitly named frailty ('from old age decrepit')
+health,multiple_conditions,Кілька станів,Several conditions,Several conditions
+health,not_stated,Відомостей немає,No information,No information
+health,unclear,Формула непевна,Uncertain formula,"Formula present, scope uncertain"
+social_status,cossack,Козак,Cossack,Cossack (enrolled in the Cossack estate)
+social_status,cossack_son,Козацький син,Cossack's son,Cossack's son (descent formula)
+social_status,pospolytyi,Посполитий,Pospolytyi,Pospolytyi: commoner of the non-Cossack estate; not automatically a serf
+social_status,merchant,Купець,Merchant,Merchant
+social_status,clergy,Духовенство,Clergy,Clergy
+social_status,townsman,Міщанин,Burgher (mishchanyn),Burgher (mishchanyn)
+social_status,odnodvorets,Однодворець,Odnodvorets,Odnodvorets (single-homestead freeholder)
+social_status,serf_explicit,Кріпосний за прямим означенням,Serf by explicit designation,"Serf, only when explicitly stated"
+social_status,other,Інше; оригінал зберігається,Other; original wording kept,Other; source wording kept
+social_status,not_stated,Не зазначено,Not stated,Not stated
+social_status,unclear,Неоднозначно,Ambiguous,Ambiguous
+dependency,subject,Підданий,Subject (piddanyi),Piddanyi: subject of an owner (dependency formula; legal serfdom not implied)
+dependency,serf_explicit,Прямо названий кріпосним,Explicitly called a serf,"Serf, explicitly stated"
+dependency,other_explicit,Інша прямо названа залежність,Other explicit dependency,Other explicit dependency
+dependency,not_stated,Не зазначено,Not stated,Not stated
+dependency,unclear,Не встановлено,Not established,Unclear; not established
+literacy,explicit_literate,Прямо засвідчена грамотність,Explicitly literate,Literacy explicitly attested
+literacy,explicit_illiterate,Прямо названа неграмотність,Explicitly illiterate,Explicitly illiterate ('неграмотный')
+literacy,signs_for_self,Підписався особисто; не тотожне повній грамотності,Signed personally; not the same as full literacy,Signed personally; not the same as full literacy
+literacy,not_stated,Немає свідчення,No evidence,No evidence
+literacy,unclear,Неоднозначно,Ambiguous,Ambiguous
+group_type,enumerated_living_group,Перелічена житлова група,Enumerated residential group,"Enumerated residential group (yard, hut); not equated with household"
+group_type,household,Реконструйоване домогосподарство,Reconstructed household,Reconstructed household
+group_type,family,Родина,Family,Family reconstructed from direct kinship formulas
+group_type,payment_group,Група спільних одержувачів,Group of joint payees,Group of joint payees
+group_type,unnamed_collective,Неназвана сукупність,Unnamed collective,Unnamed collective of unknown size
+group_type,institutional_group,Інституційна група,Institutional group,Institutional group
+group_action,as_recorded,Межі збережено,Boundaries kept,Boundaries as in the source
+group_action,split,Поділ джерельної групи,Source group split,Source group split
+group_action,combined,Об’єднання груп,Groups combined,Groups combined
+group_action,reconstructed,Реконструйовано,Reconstructed,Reconstructed
+relation_head,head,Голова,Head,Head
+relation_head,spouse,Подружжя голови,Head's spouse,Head's spouse
+relation_head,child,Дитина,Child,Child
+relation_head,child_in_law,Зять або невістка,Son-in-law or daughter-in-law,Son-in-law or daughter-in-law
+relation_head,grandchild,Онук або онука,Grandchild,Grandchild (grandson or granddaughter)
+relation_head,parent,Батько або мати,Parent,Parent (father or mother)
+relation_head,parent_in_law,Батько або мати подружжя,Spouse's parent,Spouse's parent
+relation_head,sibling,Брат або сестра,Sibling,Sibling (brother or sister)
+relation_head,sibling_in_law,Свояцтво рівня братів/сестер,Sibling-in-law,Sibling-in-law (in-law relation at the level of brothers/sisters)
+relation_head,nephew_niece,Племінник або племінниця,Nephew or niece,Nephew or niece
+relation_head,other_kin,Інший родич,Other relative,Other relative
+relation_head,stepchild,Пасинок або падчерка,Stepchild,Stepchild (stepson or stepdaughter)
+relation_head,foster_child,Вихованець; юридичне усиновлення не припускається,Foster child; legal adoption not implied,Foster child; legal adoption not implied
+relation_head,worker_servant,Працівник або слуга,Worker or servant,Worker or servant
+relation_head,worker_kin,Родич працівника,Worker's relative,Worker's relative
+relation_head,lodger,Пожилець,Lodger,Lodger
+relation_head,lodger_kin,Родич пожильця,Lodger's relative,Lodger's relative
+relation_head,subject,Підданий,Subject (piddanyi),Owner's subject (piddanyi)
+relation_head,apprentice,Учень,Apprentice,Apprentice
+relation_head,other,Інша роль,Other role,Other role
+relation_head,unknown,Не встановлено,Not established,Not established
+residence,explicit_resident,Прямо засвідчене проживання,Residence directly stated,Residence directly stated
+residence,contextual_resident,Проживання встановлене з контексту,Residence established from context,Residence established from context (listed among the people of the yard)
+residence,explicit_nonresident,Прямо живе в іншому місці,Explicitly lives elsewhere,Explicitly lives elsewhere
+residence,not_established,Проживання не встановлене,Residence not established,Residence not established
+residence,disputed,Суперечливе,Conflicting,Conflicting
+presence,present,Прямо присутній,Explicitly present,Explicitly present
+presence,temporarily_absent,Тимчасово відсутній,Temporarily absent,Temporarily absent
+presence,absent_other,Інша відсутність,Other absence,Absent (other)
+presence,unknown,Невідомо,Unknown,Unknown
+enumeration,listed,У персональному переліку,In the enumeration of persons,Listed among the people of the entry
+enumeration,mentioned_only,Лише згаданий,Mentioned only,"Only mentioned (owner, signer, seller, relative)"
+enumeration,crossed_out,Закреслений,Crossed out,Crossed out
+enumeration,uncertain,Не встановлено,Not established,Not established
+relation_type,spouse,Подружня пара,Married couple,Married couple
+relation_type,father_of,Батько дитини,Father of child,Father of child
+relation_type,mother_of,Мати дитини,Mother of child,Mother of child
+relation_type,stepfather_of,Вітчим,Stepfather,Stepfather
+relation_type,stepmother_of,Мачуха,Stepmother,Stepmother
+relation_type,foster_parent_of,Виховує як дитину,Brings up as a child,Brings up as a child
+relation_type,adoptive_parent_of,Усиновлення за обґрунтованим історичним прочитанням,"Adoption, on a justified historical reading","Adoption, on a justified historical reading"
+relation_type,sibling,Брат або сестра,Sibling,Siblings (brother or sister)
+relation_type,other_kin,Інше споріднення,Other kinship,"Other kinship (e.g. son-in-law, nephew); source term kept"
+relation_type,signs_for,Підписує за,Signs for,Signs for (an illiterate or absent person)
+relation_type,reports_for,Повідомляє за,Reports for,Reports for
+relation_type,same_entity,Кандидат або прийняте ототожнення між описами,Candidate or accepted identification across entries,Candidate or accepted identification across entries
+link_status,accepted,Прийнято з підставою,Accepted with a basis,Accepted with a basis
+link_status,candidate,Кандидат; не діє як встановлений зв’язок,Candidate; not an established link,Candidate; not to be used as an established link
+link_status,rejected,Відхилено,Rejected,Rejected
+place_type,city,Місто,Town,Town
+place_type,section,Частина міста,Part of town,Part of town
+place_type,street,Вулиця,Street,Street
+place_type,village,Село,Village,Village
+place_type,tract,Урочище,Tract,Tract (uročyšče)
+place_type,river,Річка,River,River
+place_type,administrative_unit,Адміністративна одиниця,Administrative unit,"Administrative unit (regiment, company, province)"
+place_type,other,Інше,Other,Other
+asset_type,yard,Двір,Yard,Yard
+asset_type,yard_site,Ділянка,Yard site (plot),Yard site (plot)
+asset_type,room,Покій,Room (pokii),Room (pokii) for masters or servants
+asset_type,hut,Хата,Hut (khata),Hut (khata)
+asset_type,barn,Комора / амбар,Storehouse / barn,"Barn / storehouse (ambar, komora)"
+asset_type,shed,Сарай,Shed (sarai),Shed (sarai)
+asset_type,stable,Стайня,Stable,Stable
+asset_type,shop,Лавка,Shop (lavka),Shop (lavka)
+asset_type,pidvarok,Підварок,Pidvarok,Pidvarok (subsidiary yard)
+asset_type,khutir,Хутір,Khutir (farmstead),Khutir (farmstead)
+asset_type,arable,Рілля,Arable land,Arable land
+asset_type,hayfield,Сінокіс,Hayfield,Hayfield
+asset_type,forest,Ліс,Forest,Forest
+asset_type,garden,Сад або город; уточнити термін,Orchard or vegetable garden; term to be specified,Garden / orchard (sad or horod); term to be specified
+asset_type,mill,Млин,Mill,Mill
+asset_type,brewery,Пивоварня,Brewery,Brewery
+asset_type,malthouse,Солодовня,Malthouse,Malthouse
+asset_type,distillery,Винокурня,Distillery,Distillery
+asset_type,livestock_group,Група худоби,Livestock group,Livestock group
+asset_type,institution_building,Будівля установи,Institution building,Institution building
+asset_type,mixed,Нерозділений комплекс,Undivided complex,Mixed: undivided complex
+asset_type,other,Інше,Other,Other
+asset_type,forge,Кузня,Forge,Forge as a production site
+object_scope,individual,Окремий об’єкт,Single object,Single object
+object_scope,aggregate,Нерозділений набір,Undivided set,Aggregate (complex; components are not summed with it)
+object_scope,uncertain,Не встановлено,Not established,Uncertain; not established
+asset_feature,count,Кількість об’єктів,Number of objects,Count (number of objects)
+asset_feature,area,Площа,Area,Area
+asset_feature,capacity,Місткість,Capacity,"Capacity (e.g. millstones, vats)"
+asset_feature,material,Матеріал,Material,Material
+asset_feature,condition,Стан,Condition,Condition
+asset_feature,occupancy,Заселеність або використання,Occupancy or use,Occupancy (who lives there) or use
+asset_feature,other,Інша характеристика,Other feature,Other feature
+asset_use,owner,Для господарів,For the owners,For the owners ('для хозяевъ')
+asset_use,servants,Для людей/слуг,For servants (people),For servants ('людская')
+asset_use,shared,Спільне,Shared,Shared
+asset_use,unspecified,Не вказано,Not specified,Not specified
+asset_use,nonresidential,Нежитлове,Non-residential,Non-residential
+asset_use,institutional,Інституційне,Institutional,Institutional
+value_status,recorded_positive,Позитивне свідчення,Positive evidence,The fact or number is recorded. This does not guarantee the precision of the number.
+value_status,explicit_zero,Прямий нуль,Explicit zero,Zero is explicitly stated; only then value_numeric=0.
+value_status,explicit_absence,Пряма відсутність,Explicit absence,"The absence of a specific object/activity is stated, not of all possible ones."
+value_status,not_recorded,Не записано,Not recorded,No formula after the relevant domain was checked.
+value_status,informant_unknown,Інформант не знає,Informant does not know,The source explicitly reports that the information is not known.
+value_status,deferred,Відкладено,Deferred,The information is to be provided later; this is not zero.
+value_status,illegible,Не читається,Illegible,The information exists but has not been read.
+value_status,conflicting,Суперечливе,Conflicting,Versions or passages contradict each other.
+value_status,not_applicable,Не застосовується,Not applicable,The feature does not apply to the object.
+value_status,unassessed,Не перевірено,Not yet assessed,Not yet examined; not to be confused with a gap in the source.
+economic_type,labor_contract,Умови праці загалом,Terms of employment in general,Terms of employment in general
+economic_type,cash_wage,Грошова платня,Cash wage,Cash wage
+economic_type,official_salary,Службове жалування,Official salary,Official salary
+economic_type,food_support,Харчування,Food,Food provided by the master ('пища хозяйская')
+economic_type,clothing_support,Одяг,Clothing,Clothing provided by the master ('платье хозяйское')
+economic_type,footwear_support,Взуття,Footwear,Footwear provided
+economic_type,housing_support,Житло,Housing,Housing provided
+economic_type,training,Навчання,Training,Training in a craft
+economic_type,maintenance,Утримання,Maintenance,Maintenance without wage ('взят на пропитание')
+economic_type,occupation,Заняття,Occupation,Occupation
+economic_type,capital,Капітал,Capital,Stated capital
+economic_type,debt,Борг,Debt,Debt
+economic_type,rent,Оренда,Rent,Rent
+economic_type,purchase,Купівля,Purchase,Purchase
+economic_type,sale,Продаж,Sale,Sale
+economic_type,inheritance,Успадкування,Inheritance,Inheritance
+economic_type,dowry,Посаг,Dowry,Dowry
+economic_type,exchange,Обмін,Exchange,Exchange
+economic_type,gift,Дарування,Gift,Gift
+economic_type,ownership,Власність / володіння,Ownership / possession,Ownership / possession
+economic_type,title_document,Документи на право,Title documents,Title documents
+economic_type,trade,Торгівля,Trade,Trade
+economic_type,production,Виробництво,Production,Production
+economic_type,income,Дохід,Income,Income
+economic_type,dues,Повинності,Dues,Town dues and services
+economic_type,tax,Податок або платіж,Tax or payment,Tax or payment
+economic_type,other,Інше,Other,Other
+economic_type,voluntary_funding,Добровільне фінансування,Voluntary funding,Funding by voluntary donors
+unit,ruble,Рублі,Rubles,Rubles
+unit,kopeck,Копійки,Kopecks,Kopecks
+unit,zoloty,Злоті,Zoloty,Zoloty (złoty)
+unit,kopa,Копи,Kopas,Kopa (60 units of account)
+unit,person,Особи,Persons,Persons
+unit,room,Покої,Rooms,Rooms
+unit,hut,Хати,Huts,Huts
+unit,object,Об’єкти,Objects,Objects
+unit,head,Голови худоби,Head of livestock,Head of livestock
+unit,versta,Версти,Verstas,Verstas (versta: about 1.07 km)
+unit,desiatyna,Десятини,Desiatynas,Desiatynas
+unit,sazhen,Сажні,Sazhens,Sazhens
+unit,vedro,Відра,Vedros,Vedros (vedro: bucket)
+unit,pood,Пуди,Poods,Poods
+unit,source_unit,Інша джерельна одиниця; пояснити,Other source unit; explain,"Other source unit; explained in notes, not converted"
+unit,not_applicable,Не застосовується,Not applicable,Not applicable
+period,year,За рік,Per year,"Per year ('погодно', 'в год')"
+period,half_year,За пів року,Per half-year,Per half-year
+period,month,За місяць,Per month,Per month
+period,week,За тиждень,Per week,Per week
+period,day,За день,Per day,Per day
+period,one_off,Одноразово,One-off,One-off
+period,unknown,Період невідомий,Period unknown,Period unknown
+period,not_applicable,Не застосовується,Not applicable,Not applicable
+amount_scope,per_person,Індивідуальна ставка,Individual rate,Individual rate
+amount_scope,per_each_named,По стільки кожному прямо названому,The same amount for each explicitly named person,The same amount for each named person ('каждой')
+amount_scope,shared_group,Спільна сума групі,Joint sum for a group,Joint sum for a group; not divided among persons
+amount_scope,total,Загальний підсумок,Overall total,Overall total
+amount_scope,scope_uncertain,Охоплення невизначене,Scope uncertain,Scope uncertain
+amount_scope,not_applicable,Не застосовується,Not applicable,Not applicable
+participant_role,employer,Роботодавець,Employer,Employer
+participant_role,worker,Працівник,Worker,Worker
+participant_role,payer,Платник,Payer,Payer
+participant_role,payee,Одержувач,Payee,Payee
+participant_role,owner,Власник,Owner,Owner
+participant_role,holder,Володілець; не обов’язково власник,Holder; not necessarily owner,Holder; not necessarily owner
+participant_role,tenant,Орендар,Tenant,Tenant
+participant_role,landlord,Орендодавець,Landlord,Landlord
+participant_role,buyer,Покупець,Buyer,Buyer
+participant_role,seller,Продавець,Seller,Seller
+participant_role,donor,Дарувальник,Donor,Donor
+participant_role,beneficiary,Набувач,Beneficiary / recipient,Beneficiary / recipient (e.g. of maintenance)
+participant_role,debtor,Боржник,Debtor,Debtor
+participant_role,creditor,Кредитор,Creditor,Creditor
+participant_role,informant,Інформант,Informant,Informant
+participant_role,other,Інший,Other,Other
+term_domain,occupation,Заняття,Occupation,Occupation
+term_domain,social_status,Стан,Social estate,Social estate
+term_domain,office_rank,Посада або чин,Office or rank,Office or rank
+term_domain,dependency,Залежність,Dependency,Dependency
+term_domain,kinship,Споріднення,Kinship,Kinship
+term_domain,asset,Майно,Property,Property
+term_domain,unit,Одиниця,Unit,Unit
+term_domain,other,Інше,Other,Other
+term_domain,health,Здоров’я,Health,"Source health formulas, without an automatic modern diagnosis"
+mapping_status,proposed,Запропоновано,Proposed,Equivalent proposed
+mapping_status,context_required,Потребує контексту,Context required,Use only with historical context
+mapping_status,verified,Обґрунтовано й перевірено,Justified and verified,Justified and verified
+mapping_status,no_equivalent,Однозначного відповідника немає,No unambiguous equivalent,No unambiguous equivalent (no equivalent)
+mapping_status,disputed,Суперечливе,Disputed,Disputed
+issue_type,import_difference,Розбіжність баз,Discrepancy between databases,Discrepancy between databases
+issue_type,source_variant,Розбіжність версій джерела,Discrepancy between source versions,Discrepancy between source versions
+issue_type,transcription,Прочитання,Reading,Reading
+issue_type,interpretation,Тлумачення,Interpretation,Interpretation
+issue_type,identity,Ототожнення,Identification,Identification
+issue_type,group_boundary,Межі групи,Group boundaries,Group boundaries
+issue_type,numeric,Число або одиниця,Number or unit,Number or unit
+issue_type,date,Датування,Dating,Dating
+issue_type,correction,Виправлення бази,Database correction,Database correction
+review_status,open,Відкрите,Open,Open
+review_status,resolved,Розв’язане,Resolved,Resolved
+review_status,awaiting_pdf,Очікує PDF,Awaiting PDF,Awaiting PDF
+review_status,awaiting_manuscript,Очікує рукопису,Awaiting manuscript,Awaiting manuscript
+review_status,irreducible,Нерозв’язне за наявними свідченнями,Irreducible on the available evidence,Irreducible on the available evidence
+health_manifestation,frailty,Дряхлість за формулою джерела,Frailty per the source formula,Frailty from old age (source formula)
+health_manifestation,vision_loss,Втрата зору за записом,Loss of vision as recorded,"Loss of vision, as recorded"
+health_manifestation,joint_restriction,Обмеження руху суглоба,Restricted joint movement,Restricted movement of limbs or joints
+health_manifestation,limping,Кульгання,Limping,Limping
+health_manifestation,missing_digits,Відсутність пальців,Missing digits,Missing digits
+health_manifestation,weakness,Слабкість,Weakness,Weakness
+health_manifestation,other,Інший описаний стан,Other described condition,Other described condition
+body_side,left,Ліворуч,Left,Left
+body_side,right,Праворуч,Right,Right
+body_side,both,З обох боків,Both sides,Both sides
+body_side,unspecified,Не вказано,Not specified,Not specified
+work_ability,explicit_unable,Прямо не може працювати,Explicitly unable to work,Explicitly unable to work
+work_ability,explicit_able,Прямо може працювати,Explicitly able to work,Explicitly able to work
+work_ability,not_stated,Не повідомлено,Not stated,Not stated (not reported)
+life_event,death,Смерть,Death,Death
+life_event,migration,Переміщення,Migration,Migration (movement)
+life_event,marriage,Шлюб,Marriage,Marriage
+life_event,birth,Народження,Birth,Birth attested by a later addition (note) or by the text
+coverage_status,documented,Є тематичні відомості; статус конкретних фактів див. у робочих таблицях,Documented; see working tables for specific facts,Information on the domain is present; for the status of specific facts see the working tables
+coverage_status,explicit_absence,Джерело прямо заперечує наявність,Source explicitly denies presence,Source explicitly denies presence
+coverage_status,informant_unknown,Інформант прямо не знає,Informant explicitly does not know,Informant explicitly does not know
+coverage_status,deferred,Відомості відкладені,Information deferred,Information deferred
+coverage_status,not_recorded,Не записано,Not recorded,Not recorded
+coverage_status,mixed,Кілька різних статусів у межах теми,Several different statuses within the domain,Several different statuses within the domain
+value_status,scope_uncertain,"Формула є, охоплення непевне","Formula present, scope uncertain","A formula exists, but its application to the specific person or object is not established."
+coverage_domain,anthropometry,Зріст і тілесні виміри,Height and body measurements,"Presence of formulas or figures for anthropometric measurements, including blanks left unfilled."
