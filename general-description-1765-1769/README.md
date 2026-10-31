@@ -1,8 +1,8 @@
-# General Description of Little Russia, 1765–1769: coding method
+# General Description of the Hetmanate, 1765–1769: coding method
 
-**Version 1.0 · 31 October 2026 · Igor Serdiuk**
+**Version 1.0 · 31 October 2026 · Igor Serdiuk** (ORCID [0000-0002-8930-1410](https://orcid.org/0000-0002-8930-1410))
 
-The General Description of Little Russia (*Heneralnyi opys Malorosii*), also known as the Rumiantsev Description, is an inventory of the Hetmanate compiled in 1765–1769. For each yard it records who lived there, their ages and kin relations, workers and their pay, buildings, land, trades, dependencies and much else. It is one of the richest sources for the social, demographic and economic history of eighteenth-century Ukraine.
+The General Description of the Hetmanate (*Heneralnyi opys*), also known as the Rumiantsev Description, is an inventory of the towns and villages of the Hetmanate compiled in 1765–1769. For each yard it records who lived there, their ages and kin relations, workers and their pay, buildings, land, trades, dependencies and much else. It is one of the richest sources for the social, demographic and economic history of eighteenth-century Ukraine.
 
 This folder documents a method for coding the Description into a relational research database. The method was developed and tested on the description of **Poltava**. It is designed to be applied to other settlements without changes to the core structure, so that their databases can be merged.
 
@@ -54,7 +54,7 @@ The Poltava database was coded from the published edition of the Poltava descrip
 
 ## How to cite
 
-Serdiuk, Igor. *General Description of Little Russia, 1765–1769: coding method*, version 1.0. In: *Working with Sources*. GitHub, 2026. https://github.com/Serdiukan/working-with-sources
+Serdiuk, Igor. *General Description of the Hetmanate, 1765–1769: coding method*, version 1.0. In: *Working with Sources*. GitHub, 2026. https://github.com/Serdiukan/working-with-sources
 
 See also [`CITATION.cff`](../CITATION.cff) at the root of the repository.
 
