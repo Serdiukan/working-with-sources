@@ -5,11 +5,12 @@ abstract: >-
   Coding manuals, data models, code lists, quality-control procedures and test
   scenarios for building source-critical research databases from historical
   sources. The first project documents the coding of the General (Rumiantsev)
-  Description of Little Russia, 1765-1769, for the town of Poltava. Methodology
+  Description of the Hetmanate, 1765-1769, for the town of Poltava. Methodology
   only: no source transcriptions and no coded data are included.
 authors:
   - family-names: Serdiuk
     given-names: Igor
+    orcid: "https://orcid.org/0000-0002-8930-1410"
 version: 1.0.0
 date-released: 2026-10-31
 license: CC-BY-4.0
@@ -19,7 +20,7 @@ keywords:
   - history of the family
   - economic history
   - Hetmanate
-  - General Description of Little Russia
+  - General Description of the Hetmanate
   - Rumiantsev Description
   - Poltava
   - source criticism
