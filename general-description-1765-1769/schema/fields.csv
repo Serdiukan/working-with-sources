@@ -1,0 +1,312 @@
+table,sheet_uk,primary_key,field,excel_header_uk,excel_header_en,type,required,code_list,references,mode,description_en
+PERSON_FACTS,ОСОБИ,person_fact_id,person_fact_id,ID профілю,Profile ID,text,yes,,,edit,Observation key
+PERSON_FACTS,ОСОБИ,person_fact_id,actor_id,ID учасника,Participant ID,text,yes,,ACTORS.actor_id,edit,Person
+PERSON_FACTS,ОСОБИ,person_fact_id,name_normalized,Ім’я або назва (норм.),Name or designation (normalized),text,no,,,edit,Readable normalized form of the name in this layer
+PERSON_FACTS,ОСОБИ,person_fact_id,entry_id_view,Опис (авто),Entry (auto),text,no,,,derived,Reference formula drawn from linked tables. Edit the source table; on import into R this column is not treated as a primary fact.
+PERSON_FACTS,ОСОБИ,person_fact_id,source_number_view,№ опису (авто),Entry no. (auto),integer,no,,,derived,Reference formula drawn from linked tables. Edit the source table; on import into R this column is not treated as a primary fact.
+PERSON_FACTS,ОСОБИ,person_fact_id,residence_view,Проживання (авто),Residence (auto),code,no,residence,,derived,Reference formula drawn from linked tables. Edit the source table; on import into R this column is not treated as a primary fact.
+PERSON_FACTS,ОСОБИ,person_fact_id,role_view,Роль у переліку (авто),Role in enumeration (auto),code,no,relation_head,,derived,Reference formula drawn from linked tables. Edit the source table; on import into R this column is not treated as a primary fact.
+PERSON_FACTS,ОСОБИ,person_fact_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Chronological layer
+PERSON_FACTS,ОСОБИ,person_fact_id,sex_code,Стать,Sex,code,yes,sex,,edit,Normalized sex
+PERSON_FACTS,ОСОБИ,person_fact_id,age_value,Вік: число,Age: number,decimal,no,,,edit,Number in the source unit
+PERSON_FACTS,ОСОБИ,person_fact_id,age_unit,Вік: одиниця,Age: unit,code,no,age_unit,,edit,"Days, weeks, months, years"
+PERSON_FACTS,ОСОБИ,person_fact_id,age_value_status,Вік: статус відомості,Age: information status,code,yes,value_status,,edit,Status of this specific characteristic. Absence of a record does not mean absence of the feature. Coded according to F03.
+PERSON_FACTS,ОСОБИ,person_fact_id,marital_as_recorded,Шлюбний стан,Marital status,code,yes,marital,,edit,"Normalized status, only when directly attested"
+PERSON_FACTS,ОСОБИ,person_fact_id,marital_value_status,Шлюб: статус відомості,Marriage: information status,code,yes,value_status,,edit,Status of this specific characteristic. Absence of a record does not mean absence of the feature. Coded according to F03.
+PERSON_FACTS,ОСОБИ,person_fact_id,health_raw,Здоров’я: джерельний опис,Health: source description,text,no,,,edit,Full individual or group health formula. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+PERSON_FACTS,ОСОБИ,person_fact_id,health_code,Здоров’я: категорія,Health: category,code,yes,health,,edit,Broad category of the source statement
+PERSON_FACTS,ОСОБИ,person_fact_id,health_value_status,Здоров’я: статус відомості,Health: information status,code,yes,value_status,,edit,Status of this specific characteristic. Absence of a record does not mean absence of the feature. Coded according to F03.
+PERSON_FACTS,ОСОБИ,person_fact_id,social_code,Соціальний стан,Social estate,code,yes,social_status,,edit,Personal historical status
+PERSON_FACTS,ОСОБИ,person_fact_id,social_value_status,Стан: статус відомості,Estate: information status,code,yes,value_status,,edit,Status of this specific characteristic. Absence of a record does not mean absence of the feature. Coded according to F03.
+PERSON_FACTS,ОСОБИ,person_fact_id,origin_raw,Походження: джерельний опис,Origin: source description,text,no,,,edit,Full origin formula. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+PERSON_FACTS,ОСОБИ,person_fact_id,origin_value_status,Походження: статус відомості,Origin: information status,code,yes,value_status,,edit,Status of this specific characteristic. Absence of a record does not mean absence of the feature. Coded according to F03.
+PERSON_FACTS,ОСОБИ,person_fact_id,origin_place_id,ID місця походження,Place of origin ID,text,no,,PLACES.place_id,edit,Normalized place of origin
+PERSON_FACTS,ОСОБИ,person_fact_id,printed_page_view,Сторінки (авто),Pages (auto),text,no,,,derived,Reference formula drawn from linked tables. Edit the source table; on import into R this column is not treated as a primary fact.
+PERSON_FACTS,ОСОБИ,person_fact_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Main passage
+PERSON_FACTS,ОСОБИ,person_fact_id,sex_raw,Стать: вихідне,Sex: source form,text,no,,,edit,Source designation or linguistic basis for sex. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+PERSON_FACTS,ОСОБИ,person_fact_id,age_raw,Вік: джерельний запис,Age: source wording,text,no,,,edit,"Age verbatim, with units and qualifiers. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05."
+PERSON_FACTS,ОСОБИ,person_fact_id,age_qualifier,Вік: точність,Age: precision,code,yes,qualifier,,edit,"Exact, approximate, bound or interval"
+PERSON_FACTS,ОСОБИ,person_fact_id,age_lower_years,"Вік: нижня межа, років","Age: lower bound, years",decimal,no,,,edit,"Lower bound of age in years, if calculated"
+PERSON_FACTS,ОСОБИ,person_fact_id,age_upper_years,"Вік: верхня межа, років","Age: upper bound, years",decimal,no,,,edit,"Upper bound of age in years, if calculated"
+PERSON_FACTS,ОСОБИ,person_fact_id,marital_raw,Шлюб: джерельний запис,Marriage: source wording,text,no,,,edit,Source designation of marital status. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+PERSON_FACTS,ОСОБИ,person_fact_id,social_raw,Соціальний стан: джерело,Social estate: source,text,no,,,edit,"Personal social-estate designation, verbatim. Working readable extract/paraphrase; exact machine text is in EVIDENCE."
+PERSON_FACTS,ОСОБИ,person_fact_id,rank_office_raw,Чин і посада; не підміняє заняття,Rank and office; does not replace occupation,text,no,,,edit,Rank and office; does not replace occupation. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+PERSON_FACTS,ОСОБИ,person_fact_id,dependency_raw,Формула підданства або іншої залежності,Formula of subjecthood (piddanstvo) or other dependency,text,no,,,edit,Formula of subjecthood (piddanstvo) or other dependency. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+PERSON_FACTS,ОСОБИ,person_fact_id,dependency_code,Тип залежності,Type of dependency,code,yes,dependency,,edit,Type of dependency
+PERSON_FACTS,ОСОБИ,person_fact_id,literacy_raw,Свідчення грамотності,Literacy evidence,text,no,,,edit,Literacy evidence. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+PERSON_FACTS,ОСОБИ,person_fact_id,literacy_code,Пряме означення або невідомість,Explicit designation or unknown,code,yes,literacy,,edit,Explicit designation or unknown
+PERSON_FACTS,ОСОБИ,person_fact_id,record_status,Статус перевірки,Verification status,code,yes,record_status,,edit,Verification status
+PERSON_FACTS,ОСОБИ,person_fact_id,notes,Примітки,Notes,text,no,,,edit,Changes over time and unresolved contradictions
+PERSON_FACTS,ОСОБИ,person_fact_id,name_raw,Ім’я або назва (джерело),Name or designation (source),text,no,,,edit,Name in this chronological layer; readable extract. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+PERSON_FACTS,ОСОБИ,person_fact_id,literacy_value_status,Грамотність: статус відомості,Literacy: information status,code,yes,value_status,,edit,Status of this specific characteristic. Absence of a record does not mean absence of the feature. Coded according to F03.
+PERSON_FACTS,ОСОБИ,person_fact_id,height_raw,Зріст: джерельний запис,Height: source wording,text,no,,,edit,"Source formula for height, including blank spaces; do not reconstruct numbers."
+PERSON_FACTS,ОСОБИ,person_fact_id,height_arshin,Зріст: аршини,Height: arshins,decimal,no,,,edit,"Number of arshins, only from an explicit record."
+PERSON_FACTS,ОСОБИ,person_fact_id,height_vershok,Зріст: вершки,Height: vershoks,decimal,no,,,edit,"Number of vershoks, only from an explicit record."
+PERSON_FACTS,ОСОБИ,person_fact_id,height_value_status,Зріст: статус відомості,Height: information status,code,yes,value_status,,edit,Unstated measurements are not zero; conversion to cm is possible only from known numbers and under a separate rule.
+ENTRIES,ОПИСИ,entry_id,entry_id,ID опису,Entry ID,text,yes,,,edit,Permanent entry key
+ENTRIES,ОПИСИ,entry_id,section_code,Розділ,Section,code,yes,section,,edit,Town or forshtat
+ENTRIES,ОПИСИ,entry_id,source_number_raw,Номер у джерелі,Number in source,text,yes,,,edit,"Number as in the source, including repeats and letters. Working readable extract/paraphrase; exact machine text is in EVIDENCE."
+ENTRIES,ОПИСИ,entry_id,source_number,Номер: число,Number: numeric,integer,no,,,edit,Numeric part of the number
+ENTRIES,ОПИСИ,entry_id,number_suffix,Суфікс номера,Number suffix,text,no,,,edit,"Suffix for a repeated number, if needed"
+ENTRIES,ОПИСИ,entry_id,source_order,Послідовність у джерелі,Sequence in source,integer,yes,,,edit,Order of entries within the section
+ENTRIES,ОПИСИ,entry_id,heading_raw,Заголовок джерела,Source heading,text,yes,,,edit,Full heading without analytical rewording. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ENTRIES,ОПИСИ,entry_id,object_type,Тип опису,Entry type,code,yes,entry_type,,edit,Kind of described complex
+ENTRIES,ОПИСИ,entry_id,place_id,ID місця,Place ID,text,no,,PLACES.place_id,edit,Place of the described object
+ENTRIES,ОПИСИ,entry_id,route_text,Вулиця і маршрут (не звірено),Street and route (not verified),text,no,,,edit,"Street, direction of travel, side and landmarks, in words"
+ENTRIES,ОПИСИ,entry_id,documentation_mode,Режим описування,Documentation mode,code,yes,documentation_mode,,edit,Observed mode of documentation
+ENTRIES,ОПИСИ,entry_id,documentation_scope,Що відкладено або запитано,What is deferred or requested,text,no,,,edit,Which domains exactly the deferral or request covers
+ENTRIES,ОПИСИ,entry_id,entry_status,Статус опису,Entry status,code,yes,record_status,,edit,Processing status
+ENTRIES,ОПИСИ,entry_id,notes,Примітки,Notes,text,no,,,edit,Peculiarities of numbering and of entry boundaries
+LAYERS,ШАРИ,layer_id,layer_id,ID шару,Layer ID,text,yes,,,edit,Layer key
+LAYERS,ШАРИ,layer_id,entry_id,ID опису,Entry ID,text,yes,,ENTRIES.entry_id,edit,Entry
+LAYERS,ШАРИ,layer_id,layer_kind,Тип шару,Layer kind,code,yes,layer_kind,,edit,"Original record, later addition, etc."
+LAYERS,ШАРИ,layer_id,layer_order,Порядок шару,Layer order,integer,no,,,edit,"Order of layers, only if established"
+LAYERS,ШАРИ,layer_id,record_date_raw,Дата запису: джерело,Record date: source,text,no,,,edit,Source dating of when the information was recorded. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+LAYERS,ШАРИ,layer_id,record_date_start,Дата запису: від,Record date: from,date,no,,,edit,Earliest possible date of recording
+LAYERS,ШАРИ,layer_id,record_date_end,Дата запису: до,Record date: to,date,no,,,edit,Latest possible date of recording
+LAYERS,ШАРИ,layer_id,date_precision,Точність дати,Date precision,code,yes,date_precision,,edit,Precision of dating
+LAYERS,ШАРИ,layer_id,date_basis,Підстава датування,Basis of dating,code,yes,basis,,edit,Basis of dating
+LAYERS,ШАРИ,layer_id,event_date_raw,Дата події: джерело,Event date: source,text,no,,,edit,Date of the reported event. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+LAYERS,ШАРИ,layer_id,event_date_start,Дата події: від,Event date: from,date,no,,,edit,Start of the event date interval
+LAYERS,ШАРИ,layer_id,event_date_end,Дата події: до,Event date: to,date,no,,,edit,End of the event date interval
+LAYERS,ШАРИ,layer_id,calendar_code,"Календар, якщо встановлений","Calendar, if established",code,yes,calendar,,edit,"Calendar, if established"
+LAYERS,ШАРИ,layer_id,supersedes_layer_id,Який шар виправляє; не видаляє його,Layer that this layer corrects; the corrected layer is not deleted,text,no,,LAYERS.layer_id,edit,Layer that this layer corrects; the corrected layer is not deleted
+LAYERS,ШАРИ,layer_id,scope_text,Зміст шару,Layer content,text,yes,,,edit,"Which persons, objects or facts the layer concerns"
+LAYERS,ШАРИ,layer_id,notes,Примітки,Notes,text,no,,,edit,An editorial correction of the date is explained here
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,actor_id,ID учасника,Participant ID,text,yes,,,edit,Stable participant key
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,entry_id,ID опису,Entry ID,text,yes,,ENTRIES.entry_id,edit,Entry of first registration
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,first_layer_id,ID першого шару,First layer ID,text,yes,,LAYERS.layer_id,edit,Layer of first mention
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,actor_type,Тип учасника,Participant type,code,yes,actor_type,,edit,"Person, institution or named collective"
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,name_raw,Ім’я або назва (джерело),Name or designation (source),text,yes,,,edit,Full name or designation as in the evidence. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,name_normalized,Ім’я або назва (норм.),Name or designation (normalized),text,no,,,edit,Standardized form in Ukrainian
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,given_name_normalized,Уніфіковане особове ім’я,Standardized given name,text,no,,,edit,Standardized given name
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,patronymic_raw,По батькові або патронімічна формула,Patronymic or patronymic formula,text,no,,,edit,Patronymic or patronymic formula. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,surname_raw,Прізвище або прізвисько; не доповнювати родичам автоматично,Surname or nickname; not to be added to relatives automatically,text,no,,,edit,Surname or nickname; not to be added to relatives automatically. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,name_latin,Ім’я або назва латинкою,Name or designation in Latin script,text,no,,,edit,Transliteration under a versioned rule
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,identification_status,"Іменований, неіменований, непевний","Named, unnamed, uncertain",code,yes,identification,,edit,"Named, unnamed, uncertain"
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Basis for delimiting the participant
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,record_status,Статус перевірки,Verification status,code,yes,record_status,,edit,Verification status
+ACTORS,РЕЄСТР_УЧАСНИКІВ,actor_id,notes,Примітки,Notes,text,no,,,edit,"Name variants, informant, signer, etc."
+ASSETS,МАЙНО,asset_id,asset_id,ID майна,Property ID,text,yes,,,edit,Property object key
+ASSETS,МАЙНО,asset_id,entry_id,ID опису,Entry ID,text,yes,,ENTRIES.entry_id,edit,Entry of first mention
+ASSETS,МАЙНО,asset_id,asset_type,Вид майна,Property type,code,yes,asset_type,,edit,Standardized historical type
+ASSETS,МАЙНО,asset_id,description_raw,Опис майна,Property description,text,yes,,,edit,Characterization of the object. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ASSETS,МАЙНО,asset_id,parent_asset_id,ID батьківського комплексу,Parent complex ID,text,no,,ASSETS.asset_id,edit,Complex to which the object belongs
+ASSETS,МАЙНО,asset_id,place_id,ID місця,Place ID,text,no,,PLACES.place_id,edit,Location
+ASSETS,МАЙНО,asset_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Source basis
+ASSETS,МАЙНО,asset_id,first_layer_id,ID першого шару,First layer ID,text,yes,,LAYERS.layer_id,edit,Layer of first mention
+ASSETS,МАЙНО,asset_id,asset_type_raw,Вид майна: джерело,Property type: source,text,yes,,,edit,Name of the object type in the source. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ASSETS,МАЙНО,asset_id,distance_raw,Відстань: джерело,Distance: source,text,no,,,edit,Distance from a named landmark. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ASSETS,МАЙНО,asset_id,distance_value,Відстань: число,Distance: number,decimal,no,,,edit,Number in the original unit
+ASSETS,МАЙНО,asset_id,distance_unit,Відстань: одиниця,Distance: unit,code,no,unit,,edit,Unit of distance
+ASSETS,МАЙНО,asset_id,distance_from_place_id,ID місця відліку відстані,Distance reference place ID,text,no,,PLACES.place_id,edit,Place from which the distance is measured
+ASSETS,МАЙНО,asset_id,object_scope,Окремий об’єкт чи комплекс,Single object or complex,code,yes,object_scope,,edit,Single object or undivided set
+ASSETS,МАЙНО,asset_id,notes,Примітки,Notes,text,no,,,edit,A single asset described in several places does not create a new asset without verification
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,asset_fact_id,ID характеристики,Feature ID,text,yes,,,edit,Feature key
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,asset_id,ID майна,Property ID,text,yes,,ASSETS.asset_id,edit,Object
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Layer
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,feature_code,Характеристика,Feature,code,yes,asset_feature,,edit,"Count, area, condition, material, etc."
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,value_raw,Джерельний витяг або переказ,Source extract or paraphrase,text,yes,,,edit,Source wording. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,value_numeric,Числове значення,Numeric value,decimal,no,,,edit,"Number, if any"
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,value_text,Текстове значення,Text value,text,no,,,edit,Text characteristic
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,unit_code,Одиниця,Unit,code,no,unit,,edit,Physical unit
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,qualifier,Точність значення,Value precision,code,yes,qualifier,,edit,Precision or bound
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,value_status,Статус відомості,Information status,code,yes,value_status,,edit,Evidence status
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,use_code,Для кого або чого,For whom or what,code,yes,asset_use,,edit,"For the owner, for servants, unknown purpose"
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Source basis
+ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,asset_fact_id,notes,Примітки,Notes,text,no,,,edit,A room is not equated with a house
+ECONOMIC,ЕКОНОМІКА,economic_id,economic_id,ID економічного запису,Economic record ID,text,yes,,,edit,Economic observation key
+ECONOMIC,ЕКОНОМІКА,economic_id,entry_id,ID опису,Entry ID,text,yes,,ENTRIES.entry_id,edit,Entry
+ECONOMIC,ЕКОНОМІКА,economic_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Chronological layer
+ECONOMIC,ЕКОНОМІКА,economic_id,parent_economic_id,ID пов’язаного платежу,Related payment ID,text,no,,ECONOMIC.economic_id,edit,Contract or statement of which this row is a component
+ECONOMIC,ЕКОНОМІКА,economic_id,economic_type,Тип економічного свідчення,Economic statement type,code,yes,economic_type,,edit,Kind of information
+ECONOMIC,ЕКОНОМІКА,economic_id,asset_id,ID майна,Property ID,text,no,,ASSETS.asset_id,edit,Object to which the information relates
+ECONOMIC,ЕКОНОМІКА,economic_id,occupation_raw,Заняття: джерело,Occupation: source,text,no,,,edit,"Occupation or work, verbatim. Working readable extract/paraphrase; exact machine text is in EVIDENCE."
+ECONOMIC,ЕКОНОМІКА,economic_id,occupation_standard,Заняття: нормалізоване,Occupation: normalized,text,no,,,edit,Standardized historical term
+ECONOMIC,ЕКОНОМІКА,economic_id,occupation_english,Заняття англійською,Occupation in English,text,no,,,edit,English equivalent; does not replace the historical term
+ECONOMIC,ЕКОНОМІКА,economic_id,term_id,ID терміна,Term ID,text,no,,TERMS.term_id,edit,Versioned glossary decision
+ECONOMIC,ЕКОНОМІКА,economic_id,value_raw,Джерельний витяг або переказ,Source extract or paraphrase,text,yes,,,edit,Full formula of the amount or economic statement. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+ECONOMIC,ЕКОНОМІКА,economic_id,value_numeric,Числове значення,Numeric value,decimal,no,,,edit,Number in the source unit
+ECONOMIC,ЕКОНОМІКА,economic_id,value_lower,Нижня межа суми,Amount: lower bound,decimal,no,,,edit,Lower bound in the same unit
+ECONOMIC,ЕКОНОМІКА,economic_id,value_upper,Верхня межа суми,Amount: upper bound,decimal,no,,,edit,Upper bound in the same unit
+ECONOMIC,ЕКОНОМІКА,economic_id,unit_code,Одиниця,Unit,code,no,unit,,edit,"Money, goods, service or physical unit"
+ECONOMIC,ЕКОНОМІКА,economic_id,period_code,Період,Period,code,yes,period,,edit,Periodicity
+ECONOMIC,ЕКОНОМІКА,economic_id,period_raw,Період: джерело,Period: source,text,no,,,edit,Periodicity as worded in the source. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ECONOMIC,ЕКОНОМІКА,economic_id,amount_scope,Кому належить сума,Whom the amount applies to,code,yes,amount_scope,,edit,"Individual rate, group sum, etc."
+ECONOMIC,ЕКОНОМІКА,economic_id,qualifier,Точність значення,Value precision,code,yes,qualifier,,edit,Precision of the numeric value
+ECONOMIC,ЕКОНОМІКА,economic_id,value_status,Статус відомості,Information status,code,yes,value_status,,edit,"Known, zero, deferred, etc."
+ECONOMIC,ЕКОНОМІКА,economic_id,event_date_raw,Дата події: джерело,Event date: source,text,no,,,edit,Date of purchase or other event. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+ECONOMIC,ЕКОНОМІКА,economic_id,event_date_start,Дата події: від,Event date: from,date,no,,,edit,Start of the event date interval
+ECONOMIC,ЕКОНОМІКА,economic_id,event_date_end,Дата події: до,Event date: to,date,no,,,edit,End of the event date interval
+ECONOMIC,ЕКОНОМІКА,economic_id,event_date_precision,Точність дати події,Event date precision,code,yes,date_precision,,edit,Precision of the economic event date
+ECONOMIC,ЕКОНОМІКА,economic_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Source evidence
+ECONOMIC,ЕКОНОМІКА,economic_id,record_status,Статус перевірки,Verification status,code,yes,record_status,,edit,Verification status
+ECONOMIC,ЕКОНОМІКА,economic_id,notes,Примітки,Notes,text,no,,,edit,Do not add the parent total and its components twice
+PARTICIPANTS,СТОРОНИ,participant_id,participant_id,ID сторони,Party ID,text,yes,,,edit,Participation key
+PARTICIPANTS,СТОРОНИ,participant_id,economic_id,ID економічного запису,Economic record ID,text,yes,,ECONOMIC.economic_id,edit,Observation
+PARTICIPANTS,СТОРОНИ,participant_id,actor_id,ID учасника,Participant ID,text,conditional,,ACTORS.actor_id,edit,Individual participant
+PARTICIPANTS,СТОРОНИ,participant_id,group_id,ID групи,Group ID,text,conditional,,GROUPS.group_id,edit,Group participant
+PARTICIPANTS,СТОРОНИ,participant_id,participant_role,Роль у платежі або угоді,Role in payment or transaction,code,yes,participant_role,,edit,"Payer, payee, owner, seller, etc."
+PARTICIPANTS,СТОРОНИ,participant_id,participation_basis,Підстава участі,Basis of participation,code,yes,basis,,edit,Basis of attribution
+PARTICIPANTS,СТОРОНИ,participant_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Source basis
+PARTICIPANTS,СТОРОНИ,participant_id,notes,Примітки,Notes,text,no,,,edit,A group member does not become an individual payee of the same sum
+RELATIONS,ЗВЯЗКИ,relation_id,relation_id,ID зв’язку,Relation ID,text,yes,,,edit,Relation key
+RELATIONS,ЗВЯЗКИ,relation_id,from_actor_id,Від учасника: ID,From participant: ID,text,yes,,ACTORS.actor_id,edit,First participant
+RELATIONS,ЗВЯЗКИ,relation_id,to_actor_id,До учасника: ID,To participant: ID,text,yes,,ACTORS.actor_id,edit,Second participant
+RELATIONS,ЗВЯЗКИ,relation_id,relation_type,Тип зв’язку,Relation type,code,yes,relation_type,,edit,"Kinship, signing, or identification candidate"
+RELATIONS,ЗВЯЗКИ,relation_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Layer of the evidence
+RELATIONS,ЗВЯЗКИ,relation_id,relation_raw,Зв’язок: джерело,Relation: source,text,yes,,,edit,Formula establishing the relation. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+RELATIONS,ЗВЯЗКИ,relation_id,relation_basis,Підстава зв’язку,Relation basis,code,yes,basis,,edit,Basis of interpretation
+RELATIONS,ЗВЯЗКИ,relation_id,link_status,Статус зв’язку,Link status,code,yes,link_status,,edit,"Accepted, candidate or rejected"
+RELATIONS,ЗВЯЗКИ,relation_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Source evidence
+RELATIONS,ЗВЯЗКИ,relation_id,notes,Примітки,Notes,text,no,,,edit,Ambiguity of parenthood or identification
+GROUPS,ГРУПИ,group_id,group_id,ID групи,Group ID,text,yes,,,edit,Group key
+GROUPS,ГРУПИ,group_id,entry_id,ID опису,Entry ID,text,yes,,ENTRIES.entry_id,edit,Entry
+GROUPS,ГРУПИ,group_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Layer in which the evidence or reconstruction is formed
+GROUPS,ГРУПИ,group_id,group_type,Тип групи,Group type,code,yes,group_type,,edit,Group type
+GROUPS,ГРУПИ,group_id,label_raw,"Джерельна назва, якщо є","Source label, if any",text,no,,,edit,"Source label, if any. Working readable extract/paraphrase; exact machine text is in EVIDENCE."
+GROUPS,ГРУПИ,group_id,label_normalized,Назва групи,Group label,text,yes,,,edit,Working label of the group
+GROUPS,ГРУПИ,group_id,parent_group_id,ID батьківської групи,Parent group ID,text,no,,GROUPS.group_id,edit,Broader group; explicitly defined hierarchy only
+GROUPS,ГРУПИ,group_id,head_actor_id,ID голови групи,Group head ID,text,no,,ACTORS.actor_id,edit,Head of this particular group
+GROUPS,ГРУПИ,group_id,asset_id,ID майна,Property ID,text,no,,ASSETS.asset_id,edit,"Place of co-residence, if established"
+GROUPS,ГРУПИ,group_id,size_min,Мінімальна чисельність,Minimum size,integer,no,,,edit,"Lower bound of size, if known"
+GROUPS,ГРУПИ,group_id,size_max,Максимальна чисельність,Maximum size,integer,no,,,edit,Upper bound; left blank if unknown
+GROUPS,ГРУПИ,group_id,group_basis,Підстава виділення групи,Basis of group delimitation,code,yes,basis,,edit,Source group or researcher reconstruction
+GROUPS,ГРУПИ,group_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Textual basis
+GROUPS,ГРУПИ,group_id,reconstruction_action,Записано чи реконструйовано,Recorded or reconstructed,code,yes,group_action,,edit,"Kept, split or combined"
+GROUPS,ГРУПИ,group_id,notes,Примітки,Notes,text,no,,,edit,Do not add unnamed members as invented person rows
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,membership_id,ID членства,Membership ID,text,yes,,,edit,Membership key
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,group_id,ID групи,Group ID,text,yes,,GROUPS.group_id,edit,Group
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,actor_id,ID учасника,Participant ID,text,yes,,ACTORS.actor_id,edit,Person
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Chronological layer
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,source_person_order,Позиція у переліку,Position in enumeration,integer,no,,,edit,Position in the list of persons; not automatically the family order
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,role_raw,Роль: джерело,Role: source,text,no,,,edit,Role in the source. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,relation_to_head,Роль щодо голови,Relation to head,code,yes,relation_head,,edit,Standardized relation to the head of this group
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,residence_code,Свідчення проживання,Residence evidence,code,yes,residence,,edit,Evidence of residence
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,presence_code,Фізична присутність,Physical presence,code,yes,presence,,edit,"Physical presence, distinct from usual residence"
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,enumeration_code,Як згадано,How mentioned,code,yes,enumeration,,edit,Whether included in the enumeration of persons
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Basis
+MEMBERSHIPS,СКЛАД_ГРУП,membership_id,notes,Примітки,Notes,text,no,,,edit,An informant or signer is not a resident by that fact alone
+HEALTH_OBS,ЗДОРОВЯ,health_id,health_id,ID прояву,Manifestation ID,text,yes,,,edit,Manifestation key
+HEALTH_OBS,ЗДОРОВЯ,health_id,actor_id,ID учасника,Participant ID,text,yes,,ACTORS.actor_id,edit,Person
+HEALTH_OBS,ЗДОРОВЯ,health_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Layer
+HEALTH_OBS,ЗДОРОВЯ,health_id,source_term,Джерельна формула,Source formula,text,yes,,,edit,Readable rendering of the source formula. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+HEALTH_OBS,ЗДОРОВЯ,health_id,manifestation,Прояв,Manifestation,code,yes,health_manifestation,,edit,Descriptive manifestation
+HEALTH_OBS,ЗДОРОВЯ,health_id,body_part,Частина тіла,Body part,text,no,,,edit,Body part
+HEALTH_OBS,ЗДОРОВЯ,health_id,side,Бік,Side,code,yes,body_side,,edit,Side
+HEALTH_OBS,ЗДОРОВЯ,health_id,work_ability,Пряме свідчення працездатності,Direct evidence of work ability,code,yes,work_ability,,edit,Direct evidence of work ability
+HEALTH_OBS,ЗДОРОВЯ,health_id,english_description,Опис англійською,English description,text,no,,,edit,Descriptive English equivalent
+HEALTH_OBS,ЗДОРОВЯ,health_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Basis
+HEALTH_OBS,ЗДОРОВЯ,health_id,notes,Примітки,Notes,text,no,,,edit,Uncertainty; no retrospective diagnosis
+LIFE_EVENTS,ПОДІЇ,event_id,event_id,ID події,Event ID,text,yes,,,edit,Event key
+LIFE_EVENTS,ПОДІЇ,event_id,actor_id,ID учасника,Participant ID,text,yes,,ACTORS.actor_id,edit,Person
+LIFE_EVENTS,ПОДІЇ,event_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Layer of the report
+LIFE_EVENTS,ПОДІЇ,event_id,event_type,Подія,Event,code,yes,life_event,,edit,Event type
+LIFE_EVENTS,ПОДІЇ,event_id,date_raw,Дата: джерело,Date: source,text,no,,,edit,Dating in words. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+LIFE_EVENTS,ПОДІЇ,event_id,date_start,Дата: від,Date: from,date,no,,,edit,Start of interval
+LIFE_EVENTS,ПОДІЇ,event_id,date_end,Дата: до,Date: to,date,no,,,edit,End of interval
+LIFE_EVENTS,ПОДІЇ,event_id,date_precision,Точність дати,Date precision,code,yes,date_precision,,edit,Precision
+LIFE_EVENTS,ПОДІЇ,event_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,edit,Basis
+LIFE_EVENTS,ПОДІЇ,event_id,notes,Примітки,Notes,text,no,,,edit,Caveats
+LIFE_EVENTS,ПОДІЇ,event_id,from_place_id,Звідки: ID місця,From: place ID,text,no,,PLACES.place_id,edit,Fill only on the basis of a direct formula or an explicitly flagged interpretation.
+LIFE_EVENTS,ПОДІЇ,event_id,to_place_id,Куди: ID місця,To: place ID,text,no,,PLACES.place_id,edit,Fill only on the basis of a direct formula or an explicitly flagged interpretation.
+LIFE_EVENTS,ПОДІЇ,event_id,related_actor_id,Пов’язаний учасник: ID,Related participant: ID,text,no,,ACTORS.actor_id,edit,Fill only on the basis of a direct formula or an explicitly flagged interpretation.
+LIFE_EVENTS,ПОДІЇ,event_id,event_detail_raw,Подія: джерельний опис,Event: source description,text,no,,,edit,Readable extract about the event; the literal machine text is in ДЖЕРЕЛЬНІ_ТЕКСТИ (EVIDENCE). The full source formula is checked via evidence_id; see F04–F05.
+PLACES,ТОПОНІМИ,place_id,place_id,ID місця,Place ID,text,yes,,,edit,Place key
+PLACES,ТОПОНІМИ,place_id,place_type,Тип місця,Place type,code,yes,place_type,,edit,Place type
+PLACES,ТОПОНІМИ,place_id,name_raw,Ім’я або назва (джерело),Name or designation (source),text,yes,,,edit,Source form of the name. Working readable extract/paraphrase; exact machine text is in EVIDENCE. The full source formula is checked via evidence_id; see F04–F05.
+PLACES,ТОПОНІМИ,place_id,name_normalized,Ім’я або назва (норм.),Name or designation (normalized),text,no,,,edit,Standardized historical name
+PLACES,ТОПОНІМИ,place_id,name_latin,Ім’я або назва латинкою,Name or designation in Latin script,text,no,,,edit,In Latin script under the chosen rule
+PLACES,ТОПОНІМИ,place_id,parent_place_id,ID батьківського місця,Parent place ID,text,no,,PLACES.place_id,edit,Broader territorial unit
+PLACES,ТОПОНІМИ,place_id,modern_equivalent,Сучасне ототожнення,Modern identification,text,no,,,edit,"Modern identification, if justified"
+PLACES,ТОПОНІМИ,place_id,latitude,Широта,Latitude,decimal,no,,,edit,WGS84 latitude; verified geolocation only
+PLACES,ТОПОНІМИ,place_id,longitude,Довгота,Longitude,decimal,no,,,edit,WGS84 longitude
+PLACES,ТОПОНІМИ,place_id,geolocation_basis,Підстава локалізації,Geolocation basis,text,no,,,edit,"Map, reference work and precision of georeferencing"
+PLACES,ТОПОНІМИ,place_id,evidence_id,ID свідчення,Evidence ID,text,no,,EVIDENCE.evidence_id,edit,Source evidence
+PLACES,ТОПОНІМИ,place_id,notes,Примітки,Notes,text,no,,,edit,Name variants and uncertain identification
+TERMS,ТЕРМІНИ,term_id,term_id,ID терміна,Term ID,text,yes,,,edit,Glossary decision key
+TERMS,ТЕРМІНИ,term_id,domain,"Професія, стан, залежність тощо","Occupation, social estate, dependency, etc.",code,yes,term_domain,,edit,"Occupation, social estate, dependency, etc."
+TERMS,ТЕРМІНИ,term_id,original_variant,Джерельний варіант,Source variant,text,yes,,,edit,Source variant
+TERMS,ТЕРМІНИ,term_id,standard_uk,Нормалізований історичний термін,Normalized historical term,text,yes,,,edit,Normalized historical term
+TERMS,ТЕРМІНИ,term_id,english_label,Обґрунтований англійський відповідник,Justified English equivalent,text,no,,,edit,Justified English equivalent
+TERMS,ТЕРМІНИ,term_id,definition_uk,Значення та межі застосування,Meaning and limits of application,text,yes,,,edit,Meaning and limits of application
+TERMS,ТЕРМІНИ,term_id,context_required,"Умови, за яких цей відповідник допустимий",Conditions under which this equivalent is acceptable,text,no,,,edit,Conditions under which this equivalent is acceptable
+TERMS,ТЕРМІНИ,term_id,hisco_code,"Код HISCO, як текст із початковими нулями","HISCO code, stored as text with leading zeros",text,no,,,edit,"HISCO code, stored as text with leading zeros"
+TERMS,ТЕРМІНИ,term_id,hisco_status_code,Додатковий код статусу; не тотожний станові,Supplementary status code; not identical to social estate,text,no,,,edit,Supplementary status code; not identical to social estate
+TERMS,ТЕРМІНИ,term_id,hisco_relation_code,Чиє або якого часу заняття; не родинний зв’язок із головою,"Whose occupation, or from what time; not a kinship relation to the head",text,no,,,edit,"Whose occupation, or from what time; not a kinship relation to the head"
+TERMS,ТЕРМІНИ,term_id,hisco_product_code,"Продукт, якщо потрібний","Product, if needed",text,no,,,edit,"Product, if needed"
+TERMS,ТЕРМІНИ,term_id,hisco_alt,"Альтернативний код, що потребує контекстного вибору",Alternative code requiring a contextual choice,text,no,,,edit,Alternative code requiring a contextual choice
+TERMS,ТЕРМІНИ,term_id,hisclass_code,Похідна класифікація; лише перевірене зіставлення,Derived classification; verified mapping only,text,no,,,edit,Derived classification; verified mapping only
+TERMS,ТЕРМІНИ,term_id,mapping_status,Стан перевірки відповідника,Verification status of the equivalent,code,yes,mapping_status,,edit,Verification status of the equivalent
+TERMS,ТЕРМІНИ,term_id,reference_source_id,Праця або довідник для обґрунтування,Work or reference source used as justification,text,no,,SOURCES.source_id,edit,Work or reference source used as justification
+TERMS,ТЕРМІНИ,term_id,version_label,Версія,Version,text,yes,,,edit,Glossary version
+TERMS,ТЕРМІНИ,term_id,notes,Примітки,Notes,text,no,,,edit,A historical category may have no unambiguous international equivalent
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,evidence_id,ID свідчення,Evidence ID,text,yes,,,edit,Text evidence key
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,source_id,ID джерела,Source ID,text,yes,,SOURCES.source_id,edit,Specific version of the source
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,entry_id,ID опису,Entry ID,text,no,,ENTRIES.entry_id,edit,"Entry, if the passage belongs to a single entry"
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,layer_id,ID шару,Layer ID,text,no,,LAYERS.layer_id,edit,"Layer, if established"
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,evidence_kind,Тип свідчення,Evidence kind,code,yes,evidence_kind,,edit,"Full entry, quotation, heading, etc."
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,printed_page,Друковані сторінки,Printed pages,text,no,,,edit,Printed page; not the PDF page number
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,pdf_page,Сторінка PDF,PDF page,integer,no,,,edit,"Page number in the PDF file, counted from 1"
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,folio_raw,Аркуш і зворот як у джерелі,Folio and verso as in the source,text,no,,,edit,Folio and verso as in the source. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,local_locator,Локалізація у файлі,Location in file,text,no,,,edit,"Paragraph, field/margin, position or other locator"
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,segment_no,Номер фрагмента,Segment number,integer,yes,,,edit,Order of the segments that make up a longer text
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,text_raw,Повний машинний текст,Full machine text,text,yes,,,edit,Text without correction of content. Working readable extract/paraphrase; exact machine text is in EVIDENCE.
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,text_normalized,Нормалізований текст,Normalized text,text,no,,,edit,Auxiliary readable form; the original is kept
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,transcription_status,Статус транскрипції,Transcription status,code,yes,transcription_status,,edit,Reading status
+EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,evidence_id,notes,Примітки,Notes,text,no,,,edit,"Crossings-out, insertions, breaks, differences between versions"
+SOURCES,ДЖЕРЕЛА,source_id,source_id,ID джерела,Source ID,text,yes,,,edit,Stable source identifier
+SOURCES,ДЖЕРЕЛА,source_id,source_kind,Тип джерела,Source kind,code,yes,source_kind,,edit,Type of material
+SOURCES,ДЖЕРЕЛА,source_id,title,Назва,Title,text,yes,,,edit,Full title
+SOURCES,ДЖЕРЕЛА,source_id,creator,Автор або упорядник,Author or compiler,text,no,,,edit,"Author, compiler or institution"
+SOURCES,ДЖЕРЕЛА,source_id,source_date_text,Датування документа або видання словами,"Date of the document or edition, in words",text,no,,,edit,"Date of the document or edition, in words"
+SOURCES,ДЖЕРЕЛА,source_id,archive_reference,"Архівний шифр, якщо перевірений","Archival reference, if verified",text,no,,,edit,"Archival reference, if verified"
+SOURCES,ДЖЕРЕЛА,source_id,edition_details,Вихідні дані публікації,Publication details,text,no,,,edit,Publication details
+SOURCES,ДЖЕРЕЛА,source_id,file_name,Ім’я файлу,File name,text,no,,,edit,Name of the received file
+SOURCES,ДЖЕРЕЛА,source_id,version_label,Версія,Version,text,yes,,,edit,Version or date received
+SOURCES,ДЖЕРЕЛА,source_id,sha256,SHA256 файлу,File SHA256,text,no,,,edit,Checksum of the specific file
+SOURCES,ДЖЕРЕЛА,source_id,locator_or_url,Посилання на документ або каталог,Link to the document or catalogue,text,no,,,edit,Link to the document or catalogue
+SOURCES,ДЖЕРЕЛА,source_id,source_role,Роль джерела,Source role,code,yes,source_role,,edit,Role in the project
+SOURCES,ДЖЕРЕЛА,source_id,notes,Примітки,Notes,text,no,,,edit,Provenance information and limits of use
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,review_id,ID спірного рішення,Review ID,text,yes,,,edit,Key of the issue or change
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,entry_id,ID опису,Entry ID,text,no,,ENTRIES.entry_id,edit,Related entry
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,table_name,Таблиця (стала назва),Table (fixed name),text,yes,,,edit,Target table
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,record_id,ID запису,Record ID,text,yes,,,edit,Target row
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,field_name,Поле (стала назва),Field (fixed name),text,no,,,edit,"Field, if the issue is local"
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,issue_type,Тип питання,Issue type,code,yes,issue_type,,edit,Issue type
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,old_value,Попереднє значення,Previous value,text,no,,,edit,Previous or imported value
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,new_value,Нове значення,New value,text,no,,,edit,Accepted new value
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,decision_text,Рішення або обґрунтування,Decision or rationale,text,yes,,,edit,"Problem, rationale and decision"
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,evidence_id,ID свідчення,Evidence ID,text,no,,EVIDENCE.evidence_id,edit,First evidence
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,comparison_evidence_id,ID іншого свідчення,Other evidence ID,text,no,,EVIDENCE.evidence_id,edit,Second evidence in case of conflict
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,review_status,Статус розгляду,Review status,code,yes,review_status,,edit,"Open, resolved or irreducible"
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,reviewer,Хто перевірив,Reviewed by,text,no,,,edit,Who made the decision
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,reviewed_at,Дата перевірки,Review date,date,no,,,edit,Review date
+REVIEW,СПІРНІ_РІШЕННЯ,review_id,release_label,"Версія бази, в якій діє рішення",Database version in which the decision applies,text,no,,,edit,Database version in which the decision applies
+COVERAGE,ПОВНОТА,coverage_id,coverage_id,ID покриття,Coverage ID,text,yes,,,edit,Domain check key
+COVERAGE,ПОВНОТА,coverage_id,entry_id,ID опису,Entry ID,text,yes,,ENTRIES.entry_id,edit,Entry
+COVERAGE,ПОВНОТА,coverage_id,layer_id,ID шару,Layer ID,text,yes,,LAYERS.layer_id,edit,Layer
+COVERAGE,ПОВНОТА,coverage_id,domain_code,Сфера відомостей,Information domain,code,yes,coverage_domain,,edit,Information domain
+COVERAGE,ПОВНОТА,coverage_id,value_status,Статус відомості,Information status,code,yes,coverage_status,,edit,"Positive evidence, deferral, absence, or not audited"
+COVERAGE,ПОВНОТА,coverage_id,evidence_id,ID свідчення,Evidence ID,text,conditional,,EVIDENCE.evidence_id,edit,Formula or full checked entry
+COVERAGE,ПОВНОТА,coverage_id,coverage_note,Пояснення покриття,Coverage explanation,text,no,,,edit,What was checked and which sub-domain the formula covers
+COVERAGE,ПОВНОТА,coverage_id,reviewer,Хто перевірив,Reviewed by,text,no,,,edit,Who checked the domain
+COVERAGE,ПОВНОТА,coverage_id,reviewed_at,Дата перевірки,Review date,date,no,,,edit,Review date
+TRACE,ПІДСТАВИ,trace_id,trace_id,ID підстави,Trace ID,text,yes,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,table_name,Таблиця (стала назва),Table (fixed name),text,yes,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,record_id,ID запису,Record ID,text,yes,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,evidence_id,ID свідчення,Evidence ID,text,yes,,EVIDENCE.evidence_id,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,field_basis,Поля та їхні підстави (JSON),Fields and their bases (JSON),text,no,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,field_status,Поля та статуси (JSON),Fields and statuses (JSON),text,no,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,rule_ids,Поля та правила (JSON),Fields and rules (JSON),text,no,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,import_source_id,ID джерела імпорту,Import source ID,text,no,,SOURCES.source_id,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,import_locator,Рядок у попередній базі,Row in previous database,text,no,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+TRACE,ПІДСТАВИ,trace_id,notes,Примітки,Notes,text,no,,,baseline,Grouped metadata from the previous version; not needed for manual work.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,change_id,ID правки,Change ID,text,yes,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,table_name,Таблиця (стала назва),Table (fixed name),text,yes,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,record_id,ID запису,Record ID,text,yes,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,field_name,Поле (стала назва),Field (fixed name),text,yes,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,reason,Чому змінено,Reason for change,text,yes,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,evidence_id,ID свідчення,Evidence ID,text,no,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,editor,Хто змінив,Changed by,text,no,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
+CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,change_id,changed_at,Дата правки,Change date,text,no,,,edit,Explanation log: edit values in the corresponding working table; the log does not re-apply edits.
