@@ -1,6 +1,6 @@
 # Coding manual
 
-This manual sets out the rules used to code the General Description of Little Russia (1765–1769) for Poltava. Field names and codes refer to [`../schema/fields.csv`](../schema/fields.csv) and [`../schema/codes.csv`](../schema/codes.csv).
+This manual sets out the rules used to code the General Description of the Hetmanate (1765–1769) for Poltava. Field names and codes refer to [`../schema/fields.csv`](../schema/fields.csv) and [`../schema/codes.csv`](../schema/codes.csv).
 
 ## 0. How the rules are organised
 
