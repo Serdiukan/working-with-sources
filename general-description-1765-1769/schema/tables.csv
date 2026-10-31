@@ -1,0 +1,22 @@
+module,table,sheet_uk,one_row_is,primary_key
+Source and time,SOURCES,ДЖЕРЕЛА,One specific version of a document or file,source_id
+Source and time,ENTRIES,ОПИСИ,One numbered entry in a section of the source,entry_id
+Source and time,LAYERS,ШАРИ,"One original record, addition or correction of an entry",layer_id
+Source and time,EVIDENCE,ДЖЕРЕЛЬНІ_ТЕКСТИ,One located passage of a specific version of the source,evidence_id
+People and co-residence,ACTORS,РЕЄСТР_УЧАСНИКІВ,"One participant (person, institution or named collective) delimited within an entry",actor_id
+People and co-residence,PERSON_FACTS,ОСОБИ,The characteristics of one person in one layer,person_fact_id
+People and co-residence,GROUPS,ГРУПИ,One group of a defined type and scope,group_id
+People and co-residence,MEMBERSHIPS,СКЛАД_ГРУП,One membership of a participant in a group in one layer,membership_id
+People and co-residence,RELATIONS,ЗВЯЗКИ,One directed statement of a relation between two participants,relation_id
+Property and economy,ASSETS,МАЙНО,"One property object, or an explicitly collective set of objects",asset_id
+Property and economy,ASSET_FACTS,КІЛЬКОСТІ_ТА_СТАН,One measurement or characteristic of an object in one layer,asset_fact_id
+Property and economy,ECONOMIC,ЕКОНОМІКА,"One economic formula, or one component of a composite statement",economic_id
+Property and economy,PARTICIPANTS,СТОРОНИ,One party (participant or group) to an economic statement,participant_id
+Health and events,HEALTH_OBS,ЗДОРОВЯ,One condition or functional limitation of a person,health_id
+Health and events,LIFE_EVENTS,ПОДІЇ,One directly reported life event,event_id
+Dictionaries and control,PLACES,ТОПОНІМИ,One place in its historical context,place_id
+Dictionaries and control,TERMS,ТЕРМІНИ,One versioned decision on a term in a defined context,term_id
+Dictionaries and control,COVERAGE,ПОВНОТА,One information domain of an entry in one layer,coverage_id
+Dictionaries and control,REVIEW,СПІРНІ_РІШЕННЯ,"One question, or one change of a specific record",review_id
+Dictionaries and control,TRACE,ПІДСТАВИ,"One combination of record, evidence and import origin",trace_id
+Dictionaries and control,CHANGE_NOTES,ПОЯСНЕННЯ_ПРАВОК,One explanation of a manual correction,change_id
